@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - predicates:
+          - Path=/service/**
+          filters:
+          - StripPrefix=1
+          uri: http://localhost:8090

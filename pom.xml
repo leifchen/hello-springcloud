@@ -9,6 +9,7 @@
         <module>zuul</module>
         <module>gateway</module>
         <module>eureka</module>
+        <module>eureka-cluster</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

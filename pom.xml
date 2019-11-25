@@ -12,6 +12,7 @@
         <module>eureka-cluster</module>
         <module>producer-service</module>
         <module>consumer-service</module>
+        <module>hystrix</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

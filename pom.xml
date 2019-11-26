@@ -13,6 +13,8 @@
         <module>producer-service</module>
         <module>consumer-service</module>
         <module>hystrix</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

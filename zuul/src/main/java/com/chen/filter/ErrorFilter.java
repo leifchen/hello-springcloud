@@ -27,7 +27,7 @@ public class ErrorFilter extends ZuulFilter {
 
     @Override
     public Object run() {
-        System.out.println("Inside Route Filter");
+        System.out.println("Inside Error Filter");
         return null;
     }
 }

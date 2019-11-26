@@ -30,5 +30,4 @@ public class RouteFilter extends ZuulFilter {
         System.out.println("Inside Route Filter");
         return null;
     }
-
 }

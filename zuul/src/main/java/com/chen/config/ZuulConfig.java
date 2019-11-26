@@ -5,6 +5,7 @@ import com.chen.filter.PostFilter;
 import com.chen.filter.PreFilter;
 import com.chen.filter.RouteFilter;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  * Zuul网关配置
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Bean;
  * @Author LeifChen
  * @Date 2019-11-21
  */
+@Configuration
 public class ZuulConfig {
 
     @Bean

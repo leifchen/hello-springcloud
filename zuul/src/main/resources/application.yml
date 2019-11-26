@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: gateway-service-zuul
+
+server:
+  port: 8888
+
+zuul:
+  routes:
+    api:
+      path: /producer/**
+      serviceId: producer-service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/

@@ -35,5 +35,4 @@ public class PreFilter extends ZuulFilter {
         System.out.println("Request Method : " + request.getMethod() + " Request URL : " + request.getRequestURL().toString());
         return null;
     }
-
 }

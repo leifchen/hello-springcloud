@@ -13,6 +13,8 @@
         <module>hystrix</module>
         <module>config-server</module>
         <module>config-client</module>
+        <module>consul-producer</module>
+        <module>consul-consumer</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

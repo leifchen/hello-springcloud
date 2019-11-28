@@ -1,0 +1,46 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        # 通过请求路径匹配
+        - id: path_route
+          uri: http://localhost:9000
+          predicates:
+            - Path=/producer/**
+            - Method=GET
+          filters:
+            - StripPrefix=1
+            - AddRequestParameter=name, LeifChen
+        # 通过时间匹配
+        ## After Route Predicate
+        - id: time_after_route
+          uri: https://blog.csdn.net/leifchen90
+          predicates:
+            - After=2019-11-28T14:05:00+08:00[Asia/Shanghai]
+        ## Before Route Predicate
+        - id: time_before_route
+          uri: https://github.com/leifchen
+          predicates:
+            - Before=2019-11-28T14:00:00+08:00[Asia/Shanghai]
+        ## Between Route Predicate
+        - id: time_between_route
+          uri: https://www.baidu.com
+          predicates:
+            - Between=2019-11-28T14:00:00+08:00[Asia/Shanghai],2019-11-28T14:05:00+08:00[Asia/Shanghai]
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
